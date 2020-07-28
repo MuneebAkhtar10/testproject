@@ -1,0 +1,19 @@
+<p>
+  <strong>Title:</strong>
+  <%= bug.title%>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= bug.body%>
+</p>
+<p>
+  <strong>Status:</strong>
+  <%= bug.status %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Post', @bug,
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

@@ -1,0 +1,55 @@
+
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+	margin-top: -20px;
+  padding: 10px;
+  text-align: right;
+  background: #3CB371;
+  color: white;
+  font-size: 30px;
+}
+a:link {
+	color:red;
+
+}
+.header2 {
+	margin-top: -20px;
+  padding: 10px;
+  text-align: center;
+  background: #3CB371;
+  color: white;
+  color
+  font-size: 30px;
+}
+
+</style>
+<body>
+<div class="header2">
+  <h1>Test Project</h1>
+  <p>By Muneeb</p>
+</div>
+
+<div class="header">
+  <% if current_user %>
+		<%= link_to 'Sign Out',destroy_user_session_path , method: :delete %>
+	<% else %>
+		<%= link_to 'Sign In', new_user_session_path  %>
+	<%end %>
+	<%= link_to 'Projects', projects_path %>
+</div>
+</head>
+
+</body>
+</html>
